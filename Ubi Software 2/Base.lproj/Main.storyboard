@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="vdI-5q-ndO">
             <objects>
-                <viewController id="gWa-Oy-TNg" customClass="ViewController" customModule="Ubi_Software_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gWa-Oy-TNg" customClass="LoginViewController" customModule="Ubi_Software_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhq-pl-6NU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +129,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="loginUser:" destination="gWa-Oy-TNg" eventType="touchUpInside" id="1yR-uE-4NX"/>
                                                     <segue destination="V9a-0N-yuq" kind="show" id="ztq-5Z-Gcy"/>
                                                 </connections>
                                             </button>
@@ -178,6 +179,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E5h-9q-4nQ"/>
                     </view>
+                    <connections>
+                        <outlet property="emailText" destination="9BS-pX-mGb" id="5uB-ru-LgD"/>
+                        <outlet property="passwordText" destination="LA4-a2-wjf" id="ox0-lI-oQn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azb-xw-wCO" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +191,7 @@
         <!--back-->
         <scene sceneID="5ip-ID-8uk">
             <objects>
-                <viewController id="OWv-Cz-XLg" customClass="ViewController" customModule="Ubi_Software_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OWv-Cz-XLg" customClass="LoginViewController" customModule="Ubi_Software_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P3w-8I-cLu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,22 +230,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2S-fK-1pE">
-                                <rect key="frame" x="16" y="372" width="382" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.60784313729999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-uc-l2S">
-                                <rect key="frame" x="20" y="481" width="378" height="55"/>
+                                <rect key="frame" x="20" y="481" width="378" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpUser:" destination="OWv-Cz-XLg" eventType="touchUpInside" id="r26-Z4-ub0"/>
                                     <segue destination="V9a-0N-yuq" kind="show" id="SpV-Zx-m3D"/>
                                 </connections>
                             </button>
@@ -259,10 +257,14 @@
                         <viewLayoutGuide key="safeArea" id="qfn-2K-btk"/>
                     </view>
                     <navigationItem key="navigationItem" title="back" id="OY7-T5-xz3"/>
+                    <connections>
+                        <outlet property="emailText" destination="05v-9N-piT" id="05a-mP-T3s"/>
+                        <outlet property="passwordText" destination="mvp-n8-MmG" id="o3s-Vi-fZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIZ-TD-NSB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="-242"/>
+            <point key="canvasLocation" x="924.63768115942037" y="-242.41071428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qJO-Np-JmW">
@@ -283,6 +285,9 @@
                                 <state key="normal" title="Location">
                                     <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xRd-9Q-sSu" kind="show" id="Jk8-hm-CBS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9da-y1-vUg">
                                 <rect key="frame" x="95" y="250" width="225" height="114"/>
@@ -325,11 +330,11 @@
         <scene sceneID="1fG-zm-8Ly">
             <objects>
                 <viewController id="KVv-48-XJA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="r0U-7W-D0D">
+                    <view key="view" contentMode="scaleToFill" id="r0U-7W-D0D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svA-EW-ZhL">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svA-EW-ZhL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2LR-7f-HbI">
@@ -458,11 +463,11 @@
         <scene sceneID="YZ1-rW-yDc">
             <objects>
                 <viewController id="I2z-Tt-qWy" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="hqd-K6-twK">
+                    <view key="view" contentMode="scaleToFill" id="hqd-K6-twK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-c3-wvp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-c3-wvp">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDa-Tm-6UO">
@@ -649,6 +654,9 @@
                                                         <state key="normal" title="Check Location">
                                                             <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="xRd-9Q-sSu" kind="show" id="moz-pa-jaI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1000,11 +1008,11 @@
         <scene sceneID="4Td-bM-lYr">
             <objects>
                 <viewController id="aQP-fo-w65" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="jA9-Ms-dGo">
+                    <view key="view" contentMode="scaleToFill" id="jA9-Ms-dGo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7l-YG-n7I">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7l-YG-n7I">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-4Y-XW8">
@@ -1253,6 +1261,25 @@
                                                     <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instahouse.png" translatesAutoresizingMaskIntoConstraints="NO" id="KtY-XQ-dK9">
+                                                <rect key="frame" x="0.0" y="1362" width="143" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="INSTAGRAM_ICON_SETS-02-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="ey2-n3-Xxc">
+                                                <rect key="frame" x="292" y="1362" width="114" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5w-LL-U8H">
+                                                <rect key="frame" x="316" y="1356" width="90" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rr5-Pl-9pV">
+                                                <rect key="frame" x="-20" y="1362" width="90" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <segue destination="KVv-48-XJA" kind="show" id="BZq-96-nsh"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1283,17 +1310,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEE-hN-jk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5013" y="-427"/>
+            <point key="canvasLocation" x="5011.594202898551" y="-427.23214285714283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L9b-lO-f4z">
             <objects>
-                <viewController id="xRd-9Q-sSu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NNa-h4-Tp9">
+                <viewController id="xRd-9Q-sSu" customClass="ViewController" customModule="Ubi_Software_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="NNa-h4-Tp9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDy-bl-Bhd">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDy-bl-Bhd">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65B-nS-COI">
@@ -1346,7 +1373,53 @@
                                                 <state key="normal" title=" Back">
                                                     <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="I2z-Tt-qWy" kind="showDetail" id="iGJ-YS-0XN"/>
+                                                </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jordan 1" translatesAutoresizingMaskIntoConstraints="NO" id="izI-2n-agk">
+                                                <rect key="frame" x="-38" y="87" width="491" height="279"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-Wi-uME">
+                                                <rect key="frame" x="0.0" y="487" width="406" height="973"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </mapView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6vF-c3-0ip">
+                                                <rect key="frame" x="50" y="374" width="307" height="65.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="4nG-dK-579">
+                                                        <rect key="frame" x="0.0" y="0.0" width="307" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jordan 1 Chicago 2020," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-FX-8v3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="181" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/18/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJx-4Z-7ih">
+                                                                <rect key="frame" x="195" y="0.0" width="59" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$160" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6m-tH-Yrc">
+                                                                <rect key="frame" x="268" y="0.0" width="39" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUq-lp-itq">
+                                                        <rect key="frame" x="100" y="35.5" width="107" height="30"/>
+                                                        <state key="normal" title="Check Location">
+                                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1374,6 +1447,9 @@
                         <viewLayoutGuide key="safeArea" id="XZ2-5Q-IlE"/>
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
+                    <connections>
+                        <outlet property="map" destination="ItP-Wi-uME" id="jhi-xj-uZY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQS-jl-TlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1385,19 +1461,24 @@
         <image name="92087" width="1000" height="1000"/>
         <image name="Air-Jordan-1-First-Class-Flight-Release-Date-555088-170-Price-1" width="900" height="630"/>
         <image name="Air-Jordan-5-Fire-Red-Silver-Tongue-2020-Release-Date" width="900" height="610"/>
+        <image name="INSTAGRAM_ICON_SETS-02-512.png" width="512" height="512"/>
         <image name="Yeezy-500-Utility-Black-1" width="500" height="271"/>
         <image name="addus" width="1880" height="1060"/>
         <image name="adidas-Ultra-Boost-Shoes-Running-Shoes-ftwr-white-active-re-SS19-DB3199UK-8-5-2" width="430" height="430"/>
         <image name="adidas-yeezy-boost-350-pirate-black_jf6gh2" width="1200" height="676"/>
         <image name="air-jordan-11-bred-release-dates-2019-thumb" width="500" height="289"/>
         <image name="background-backgrounds-color-colorful-Favim.com-2490516" width="1280" height="1280"/>
+        <image name="instahouse.png" width="200" height="200"/>
         <image name="jordan 1" width="1118" height="745"/>
         <image name="solar" width="1400" height="1000"/>
         <image name="waverunner" width="900" height="632"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="03o-eB-GlC"/>
+        <segue reference="BlS-r1-aKw"/>
+        <segue reference="moz-pa-jaI"/>
+        <segue reference="iNq-NO-f9A"/>
+        <segue reference="BZq-96-nsh"/>
         <segue reference="BmO-KI-GO1"/>
-        <segue reference="s0f-U7-VNU"/>
+        <segue reference="eRy-lc-rb7"/>
     </inferredMetricsTieBreakers>
 </document>

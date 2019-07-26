@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>875351084268-vlv51snlsddn0nfpeg53leigdm8sndf5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.875351084268-vlv51snlsddn0nfpeg53leigdm8sndf5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBX9gi6eG0NlXpBTHmBNHfV8TDn9IribLI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>875351084268</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Ubi-Software-2</string>
+	<key>PROJECT_ID</key>
+	<string>ubilaunch</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ubilaunch.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:875351084268:ios:9ae2bdd5e1365e98</string>
+	<key>DATABASE_URL</key>
+	<string>https://ubilaunch.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+framework module Pods_Ubi_Software_2 {
+  umbrella header "Pods-Ubi Software 2-umbrella.h"
+
+  export *
+  module * { export * }
+}
